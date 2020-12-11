@@ -1,0 +1,14 @@
+{
+	"scripts": {
+		"start": "node main",
+		"dev": "MONGODB_URI=mongodb://localhost/counter-dev node-dev main"
+	},
+	"dependencies": {
+		"express": "^4.17.1",
+		"mongoose": "^5.10.14",
+		"pug": "^3.0.0"
+	},
+	"devDependencies": {
+		"node-dev": "^6.2.0"
+	}
+}
