@@ -1,20 +1,11 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const Counter = require('./Counter')
 
 const PORT = process.env.PORT || 4444
 const MONGODB_URI = process.env.MONGODB_URI
 
 mongoose.connect(MONGODB_URI, { useUnifiedTopology: true, useFindAndModify: false, useNewUrlParser: true })
-
-const Counter = mongoose.model(
-	'Counter',
-	new mongoose.Schema({
-		count: {
-			type: Number,
-			required: true,
-		},
-	})
-)
 
 const app = express()
 
